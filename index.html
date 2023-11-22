@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    
+    <Div class="container">
+        <h2>Rock Paper Scissor</h2>
+        <div class="menu">
+            <button onclick="
+                pickComputerMove();
+
+                console.log(computerMove);
+
+                let result = '';
+
+                if (computerMove === 'rock') {
+                    result = 'Tie';
+                } else if (computerMove === 'paper') {
+                    result = 'You lose';
+                } else if (computerMove === 'scissor') {
+                    result = 'You win';
+                }
+
+                alert(`You picked rock. Computer picked ${computerMove}. ${result}`)
+            
+                ">
+                <i class="fa-solid fa-hand-fist"></i>
+                <br>Rock
+            </button>
+
+            <button onclick="
+                pickComputerMove();
+
+                console.log(computerMove);
+
+                let result = '';
+
+                if (computerMove === 'rock') {
+                    result = 'You win';
+                } else if (computerMove === 'paper') {
+                    result = 'Tie'
+                } else if (computerMove === 'scissor') {
+                    result = 'You lose'
+                }
+
+                alert(`You picked rock. Computer picked ${computerMove}. ${result}`)
+                ">
+                <i class="fa-solid fa-toilet-paper"></i>
+                <br>Paper
+            </button>
+
+            <button onclick="
+                
+                pickComputerMove();
+
+                console.log(computerMove)
+
+                let result = '';
+
+                if (computerMove === 'rock') {
+                    result = 'You lose'
+                } else if (computerMove === 'paper') {
+                    result = 'You win'
+                } else if (computerMove === 'scissor') {
+                    result = 'Tie'
+                }    
+
+                alert(`You picked scissor. The computer picked ${computerMove}. ${result}`)
+                ">
+                <i class="fa-solid fa-scissors"></i>
+                <br>Scissor
+            </button>
+
+        </div>
+        <div class="exp">
+            <h3>Choose One of the Buttons</h3>
+            <p><span>Rock</span> wins against <span>scissors</span>; <span> paper</span> wins against <span>rock</span>; and <span>scissors</span> wins against  <span>paper</span>.</p>
+            <p>Let's Play!!!</p>
+        </div>
+        
+    </Div>
+
+
+    <script>
+        let computerMove = '';
+
+        function pickComputerMove () {
+            const randomNumber = Math.random()
+
+                
+
+                if (randomNumber >= 0 && randomNumber < 1 /3) {
+                    computerMove = 'rock'
+                } else if (randomNumber >= 1 /3 && randomNumber < 2 /3) {
+                    computerMove = 'paper'
+                } else if (randomNumber >= 2 /3 && randomNumber < 1) {
+                    computerMove = 'scissor'
+                }
+        }
+    </script>
+</body>
+</html>
